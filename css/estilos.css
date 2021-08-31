@@ -144,18 +144,28 @@
     background: none;
 }
 
+
 /* ------------------------------------------------------- */
-/* Acerca de */
+/* Todo el contenido similar del codigo */
 /* ------------------------------------------------------- */
 section{
     padding: 100px 0;
 }
 
-.about{
+.about, .services, .skills{
     font-family: 'Poppins', sans-serif;
 }
 
-.about .title{
+.about .about-content,
+.services .serv-content,
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
@@ -165,7 +175,7 @@ section{
     padding-bottom: 20px;
 }
 
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -176,8 +186,7 @@ section{
     transform: translateX(-50%);
 }
 
-.about .title::after{
-    content: "¿Quien soy?";
+section .title::after{
     position: absolute;
     bottom: -13px;
     left: 50%;
@@ -188,11 +197,12 @@ section{
     transform: translateX(-50%);
 }
 
-.about .about-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+/* ------------------------------------------------------- */
+/* Acerca de */
+/* ------------------------------------------------------- */
+
+.about .title::after{
+    content: "¿Quien soy?";
 }
 
 .about .about-content .left{
@@ -229,6 +239,7 @@ section{
     background: var(--guinda);
     color: #fff;
     font-size: 20px;
+    font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
@@ -241,15 +252,150 @@ section{
     background: none;
 }
 
+/* ------------------------------------------------------- */
+/* Seccion servicios */
+/* ------------------------------------------------------- */
 
+.services{
+    color: #fff;
+    background-color: #111;
+}
 
+.services .title::before{
+    background-color: #fff;
+}
+.services .title::after{
+    background-color: #111;
+    content: "Lo que ofrezco";
+}
 
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background-color: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.services .serv-content .card:hover{
+    background-color: var(--guinda);
+}
 
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
 
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
 
+.services .serv-content .card i{
+    font-size: 50px;
+    color: var(--guinda);
+    transition: color 0.3s ease;
+}
 
+.services .serv-content .card:hover i{
+    color: #fff;
+}
 
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* ------------------------------------------------------- */
+/* Seccion Skills  */
+/* ------------------------------------------------------- */
+
+.skills .title::after{
+    content: "Habilidades";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p{
+    text-align: justify;
+}
+
+.skills .skills-content .left a{
+    display: inline-block;
+    background: var(--guinda);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--guinda);
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover{
+    color: var(--guinda);
+    background: none;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background-color: lightgray;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--guinda);
+}
+
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 70%;
+}
+.skills-content .right .js::before{
+    width: 60%;
+}
+.skills-content .right .git::before{
+    width: 80%;
+}
+.skills-content .right .python::before{
+    width: 70%;
+}
+.skills-content .right .mysql::before{
+    width: 70%;
+}
 
 
 
@@ -336,6 +482,15 @@ section{
         margin: 0 auto 60px;
     }
 
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
     
 
 }
@@ -356,6 +511,12 @@ section{
     .home .home-content a{
         font-size: 20px;
         padding: 9px 25px;
+    }
+
+    .services .serv-content .card,
+    .skills .skills-content .column{
+        width: 100%;
+        margin-bottom: 35px;
     }
 }
 
