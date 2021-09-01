@@ -12,18 +12,21 @@
     <title>Portafolio Pro</title>
 </head>
 <body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
                 <a href="#">Porta<span>folio.</span></a>
             </div>
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Equipo</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#home" class="menu-btn">Inicio</a></li>
+                <li><a href="#about" class="menu-btn">Acerca de</a></li>
+                <li><a href="#services" class="menu-btn">Servicios</a></li>
+                <li><a href="#skills" class="menu-btn">Habilidades</a></li>
+                <li><a href="#teams" class="menu-btn">Equipo</a></li>
+                <li><a href="#contact" class="menu-btn">Contacto</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,7 +41,7 @@
             <div class="home-content">
                 <div class="text-1">Hola, mi nombre es</div>
                 <div class="text-2">Saúl Suaste</div>
-                <div class="text-3">Soy <span>Front Developer</span></div>
+                <div class="text-3">Soy <span class="typing"></span></div>
                 <a href="#">Contáctame</a>
             </div>
         </div>
@@ -54,7 +57,7 @@
                     <img src="imagenes/foto.jpg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">Mi nombre es Saúl y soy <span>Desarrollador WEB</span></div>
+                    <div class="text">Mi nombre es Saúl y soy <span class="typing2"></span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quos quam at dolorum sint saepe libero iusto laborum harum in tempora facilis velit nulla incidunt consectetur nam hic aliquam exercitationem porro, quasi ipsa. Consequuntur laudantium totam molestiae, fugiat, minima ex eius quae accusantium porro harum temporibus sit provident odit quaerat!</p>
                     <a href="#">Descargar CV</a>
                 </div>
@@ -256,6 +259,10 @@
     </section>
 
 
+    <!-- Footer -->
+    <footer>
+        <span>Desarrollado por <a href="#">SaulSuaste</a> | <span class="far fa-copyright"></span> 2021 Todos los derechos reservados.</span>
+    </footer>
 
 
     <!-- JQuery -->
@@ -266,6 +273,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <!-- Owl Carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Animacion de palabras -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
